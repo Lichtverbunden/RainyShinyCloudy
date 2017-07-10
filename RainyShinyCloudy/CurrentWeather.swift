@@ -15,8 +15,6 @@ class CurrentWeather
     fileprivate var _date: String!
     fileprivate var _weatherType: String!
     fileprivate var _currentTemp: Int!
-//    fileprivate var _highTemp: Int!
-//    fileprivate var _lowTemp: Int!
     
     var cityName: String
     {
@@ -27,6 +25,7 @@ class CurrentWeather
         
         return _cityName
     }
+    
     var weatherType: String
     {
         if _weatherType == nil
@@ -36,6 +35,7 @@ class CurrentWeather
         
         return _weatherType
     }
+    
     var currentTemp: Int
     {
         if _currentTemp == nil
@@ -45,25 +45,7 @@ class CurrentWeather
         
         return _currentTemp
     }
-//    var highTemp: Int
-//    {
-//        if _highTemp == nil
-//        {
-//            _highTemp = 0
-//        }
-//        
-//        return _highTemp
-//    }
-//    var lowTemp: Int
-//    {
-//        if _lowTemp == nil
-//        {
-//            _lowTemp = 0
-//        }
-//        
-//        return _lowTemp
-//    }
-    
+
     var date: String
     {
         if _date == nil
@@ -118,28 +100,6 @@ class CurrentWeather
                         print(self._currentTemp)
                     }
                 }
-                
-//                if let main = dict["main"] as? Dictionary<String, Any>
-//                {
-//                    if let lowTemperature = main["temp_min"] as? Double
-//                    {
-//                        let kelvinToCelsius = Int(round(lowTemperature - 273.15))
-//                        self._lowTemp = kelvinToCelsius
-//                        print(self._lowTemp)
-//                    }
-//                }
-//                
-//                if let main = dict["main"] as? Dictionary<String, Any>
-//                {
-//                    if let highTemperature = main["temp_max"] as? Double
-//                    {
-//                        let kelvinToCelsius = Int(round(highTemperature - 273.15))
-//                        self._highTemp = kelvinToCelsius
-//                        print(self._highTemp)
-//                    }
-//                }
-                
-                
             }
             completed()
         }
